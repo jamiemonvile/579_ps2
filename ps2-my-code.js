@@ -21,10 +21,24 @@ function addOne(x) {
  * and returns the largest item in that array.
  */
 
-function largest(lst) {
-  console.log(Math.max(lst));
-  return Math.max(lst);
+ // Python example from class
+// largest_so_far = l[0]
+//   for n in L:
+//   if n> largest_so_far = n
+
+//   return(largest_so_far)
+
+function largest(lst){
+  let largest_so_far = -Infinity, i=0, n = lst.length;
+    for (; i != n; ++i){
+      if (lst[i] > largest_so_far){
+        largest_so_far = lst[i];
+      }
+    }
+    return largest_so_far;
 }
+
+
 
 /**
  * The *factorial* of a number n is denoted as: n! === n * (n-1) * (n-2) * ... * 1
